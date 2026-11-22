@@ -1,0 +1,38 @@
+# Local datasets, manifests containing host paths, and generated outputs
+/data/
+/output/
+/results/
+/runs/
+/scratch/
+
+# Development environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.vscode/
+.idea/
+
+# Model weights, cached arrays, logs, and credentials
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.npy
+*.npz
+!/artifacts/*.npz
+*.pkl
+*.log
+.env
+.env.*
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+
+# Local system files
+.DS_Store
+Thumbs.db

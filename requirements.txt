@@ -1,0 +1,10 @@
+# Training-reference and prediction-review dependencies. Historical versions are unconfirmed.
+torch
+torchvision
+numpy
+scipy
+scikit-learn
+Pillow
+PyWavelets
+matplotlib
+seaborn

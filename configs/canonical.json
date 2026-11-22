@@ -1,0 +1,2908 @@
+{
+  "datasets": {
+    "NKSID": {
+      "protocol": "htpl20",
+      "suffix": "_htpl",
+      "counts": [
+        1677,
+        417,
+        523
+      ],
+      "classes": [
+        "Big Propeller",
+        "Cylinder",
+        "Fishing Net",
+        "Floats",
+        "Iron Pipeline",
+        "Small Propeller",
+        "Soft Pipeline",
+        "Tire"
+      ],
+      "folders": [
+        "big_propeller",
+        "cylinder",
+        "fishing_net",
+        "floats",
+        "iron_pipeline",
+        "small_propeller",
+        "soft_pipeline",
+        "tire"
+      ],
+      "extension": "jpg",
+      "train_per_class": [
+        131,
+        184,
+        13,
+        609,
+        72,
+        60,
+        74,
+        534
+      ],
+      "test_per_class": [
+        40,
+        58,
+        4,
+        190,
+        22,
+        19,
+        23,
+        167
+      ],
+      "manifest_sha256": {
+        "kfold_train_htpl.txt": "c6f701d58beae565f3851ce4d2dcab95501a59a54756fa7798734aac6b014637",
+        "kfold_val_htpl.txt": "69adfd1b08c1cb50540903d5807106e358a915b274465fcac39a8af037e7523b",
+        "test_abs_htpl.txt": "6a9612d247ecaeb0158e430768c4aa78e8a8c6252b75d3ec4887804014919d5d",
+        "train_abs_htpl.txt": "38580e2c10a14378d7fd4d0f01ea37bb4ec8b8d3c716966e6d978d883278efae"
+      }
+    },
+    "FLSMDD": {
+      "protocol": "flsmdd",
+      "suffix": "",
+      "counts": [
+        1324,
+        326,
+        714
+      ],
+      "classes": [
+        "Bottle",
+        "Can",
+        "Chain",
+        "Drink Carton",
+        "Hook",
+        "Propeller",
+        "Shampoo Bottle",
+        "Standing Bottle",
+        "Tire",
+        "Valve"
+      ],
+      "folders": [
+        "bottle-449",
+        "can-367",
+        "chain-226",
+        "drink-carton-349",
+        "hook-133",
+        "propeller-137",
+        "shampoo-bottle-99",
+        "standing-bottle-65",
+        "tire-331",
+        "valve-208"
+      ],
+      "extension": "png",
+      "train_per_class": [
+        252,
+        205,
+        127,
+        196,
+        75,
+        76,
+        56,
+        36,
+        185,
+        116
+      ],
+      "test_per_class": [
+        135,
+        111,
+        68,
+        105,
+        40,
+        42,
+        30,
+        20,
+        100,
+        63
+      ],
+      "manifest_sha256": {
+        "kfold_train.txt": "67b3880ca824499f5dfc1ded940241ed9150fe084a629bf45f2883bff5bf1337",
+        "kfold_val.txt": "c837db6fdff0e98e49c32f3fb692d1385ee3f4ec4606076b55762614df17c8cb",
+        "test_abs.txt": "fec8c86f1dd7bc68a0b4b5012ad0f4c44fe10b2aeb0a82c318c8b3d680611ced",
+        "train_abs.txt": "4a226754f055bf92c0d0b7748f845938a69df4db5d6fc14da35cb936cc14f1f0"
+      }
+    }
+  },
+  "experiments": {
+    "A0": {
+      "dataset": "NKSID",
+      "source_result": "results/htpl20/representation/rgb_only",
+      "recorded_runs": [
+        {
+          "seed": 0,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "rgb_only",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 0,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "rgb",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "_parsed_groups": [
+              "rgb"
+            ],
+            "_rgb_cnn_in_ch": 3,
+            "_wavelet_cnn_in_chs": []
+          },
+          "metrics": {
+            "accuracy": 0.7724665391969407,
+            "gmean": 0.7091050001274468,
+            "macro_f1": 0.7055896744159513
+          },
+          "recall": [
+            0.975,
+            0.9137931034482759,
+            1.0,
+            0.7578947368421053,
+            0.7272727272727273,
+            0.21052631578947367,
+            0.8260869565217391,
+            0.7485029940119761
+          ]
+        },
+        {
+          "seed": 1,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "rgb_only",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 1,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "rgb",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "_parsed_groups": [
+              "rgb"
+            ],
+            "_rgb_cnn_in_ch": 3,
+            "_wavelet_cnn_in_chs": []
+          },
+          "metrics": {
+            "accuracy": 0.032504780114722756,
+            "gmean": 0.0,
+            "macro_f1": 0.010191846522781775
+          },
+          "recall": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.7391304347826086,
+            0.0
+          ]
+        },
+        {
+          "seed": 2,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "rgb_only",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 2,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "rgb",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "_parsed_groups": [
+              "rgb"
+            ],
+            "_rgb_cnn_in_ch": 3,
+            "_wavelet_cnn_in_chs": []
+          },
+          "metrics": {
+            "accuracy": 0.5162523900573613,
+            "gmean": 0.6169084447862693,
+            "macro_f1": 0.6087422098778326
+          },
+          "recall": [
+            0.875,
+            0.9827586206896551,
+            1.0,
+            0.35789473684210527,
+            0.8181818181818182,
+            0.2631578947368421,
+            0.8260869565217391,
+            0.38323353293413176
+          ]
+        }
+      ],
+      "recorded_summary": {
+        "accuracy": {
+          "mean": 0.4404079031230083,
+          "std": 0.3757660720112502,
+          "ci_low": -0.4930467671448607,
+          "ci_high": 1.3738625733908774,
+          "runs": [
+            0.7724665391969407,
+            0.032504780114722756,
+            0.5162523900573613
+          ]
+        },
+        "gmean": {
+          "mean": 0.4420044816379054,
+          "std": 0.385552879051875,
+          "ci_low": -0.5157619650769022,
+          "ci_high": 1.399770928352713,
+          "runs": [
+            0.7091050001274468,
+            0.0,
+            0.6169084447862693
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.44150791027218855,
+          "std": 0.37665636591338436,
+          "ci_low": -0.494158372652486,
+          "ci_high": 1.377174193196863,
+          "runs": [
+            0.7055896744159513,
+            0.010191846522781775,
+            0.6087422098778326
+          ]
+        }
+      },
+      "archive_sha256": "59a4667ef0942fad2fb909d0fd2945400bc418b91cc98657b967353bc065476e"
+    },
+    "A1": {
+      "dataset": "NKSID",
+      "source_result": "results/htpl20/representation/bior37_only",
+      "recorded_runs": [
+        {
+          "seed": 0,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "bior37_only",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 0,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "bior",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "_parsed_groups": [
+              "bior"
+            ],
+            "_rgb_cnn_in_ch": 0,
+            "_wavelet_cnn_in_chs": [
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.9808795411089866,
+            "gmean": 0.9544941163949499,
+            "macro_f1": 0.956617933424475
+          },
+          "recall": [
+            0.95,
+            1.0,
+            1.0,
+            0.9842105263157894,
+            1.0,
+            0.7368421052631579,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "seed": 1,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "bior37_only",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 1,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "bior",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "_parsed_groups": [
+              "bior"
+            ],
+            "_rgb_cnn_in_ch": 0,
+            "_wavelet_cnn_in_chs": [
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.9847036328871893,
+            "gmean": 0.9475762555128998,
+            "macro_f1": 0.9595602884855521
+          },
+          "recall": [
+            0.95,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.6842105263157895,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "seed": 2,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "bior37_only",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 2,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "bior",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "_parsed_groups": [
+              "bior"
+            ],
+            "_rgb_cnn_in_ch": 0,
+            "_wavelet_cnn_in_chs": [
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.97131931166348,
+            "gmean": 0.9387883709375412,
+            "macro_f1": 0.9430693069845331
+          },
+          "recall": [
+            0.925,
+            1.0,
+            1.0,
+            0.9736842105263158,
+            0.9090909090909091,
+            0.7368421052631579,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "recorded_summary": {
+        "accuracy": {
+          "mean": 0.9789674952198851,
+          "std": 0.006893979494194993,
+          "ci_low": 0.9618419007745341,
+          "ci_high": 0.9960930896652361,
+          "runs": [
+            0.9808795411089866,
+            0.9847036328871893,
+            0.97131931166348
+          ]
+        },
+        "gmean": {
+          "mean": 0.946952914281797,
+          "std": 0.007871405580391776,
+          "ci_low": 0.927399258835306,
+          "ci_high": 0.9665065697282879,
+          "runs": [
+            0.9544941163949499,
+            0.9475762555128998,
+            0.9387883709375412
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.95308250963152,
+          "std": 0.008795597407998039,
+          "ci_low": 0.9312330344132094,
+          "ci_high": 0.9749319848498306,
+          "runs": [
+            0.956617933424475,
+            0.9595602884855521,
+            0.9430693069845331
+          ]
+        }
+      },
+      "archive_sha256": "c1eee08133714929322d4fa7dc1b49851a90c26806e03bc24152b7e67ba7936b"
+    },
+    "A2": {
+      "dataset": "NKSID",
+      "source_result": "results/htpl20/representation/rbio39_only",
+      "recorded_runs": [
+        {
+          "seed": 0,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "rbio39_only",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 0,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "rbio",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "_parsed_groups": [
+              "rbio"
+            ],
+            "_rgb_cnn_in_ch": 0,
+            "_wavelet_cnn_in_chs": [
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.9866156787762906,
+            "gmean": 0.966536624676001,
+            "macro_f1": 0.9702890859618847
+          },
+          "recall": [
+            0.975,
+            1.0,
+            1.0,
+            0.9894736842105263,
+            1.0,
+            0.7894736842105263,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "seed": 1,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "rbio39_only",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 1,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "rbio",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "_parsed_groups": [
+              "rbio"
+            ],
+            "_rgb_cnn_in_ch": 0,
+            "_wavelet_cnn_in_chs": [
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.9847036328871893,
+            "gmean": 0.9584528653380282,
+            "macro_f1": 0.9639569995242849
+          },
+          "recall": [
+            0.95,
+            1.0,
+            1.0,
+            0.9947368421052631,
+            0.9545454545454546,
+            0.7894736842105263,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "seed": 2,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "rbio39_only",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 2,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "rbio",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "_parsed_groups": [
+              "rbio"
+            ],
+            "_rgb_cnn_in_ch": 0,
+            "_wavelet_cnn_in_chs": [
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.97131931166348,
+            "gmean": 0.9284408741428268,
+            "macro_f1": 0.9353903737720806
+          },
+          "recall": [
+            0.875,
+            0.9827586206896551,
+            1.0,
+            1.0,
+            0.8181818181818182,
+            0.7894736842105263,
+            1.0,
+            0.9940119760479041
+          ]
+        }
+      ],
+      "recorded_summary": {
+        "accuracy": {
+          "mean": 0.9808795411089867,
+          "std": 0.008334414806005101,
+          "ci_low": 0.9601757069842757,
+          "ci_high": 1.0015833752336978,
+          "runs": [
+            0.9866156787762906,
+            0.9847036328871893,
+            0.97131931166348
+          ]
+        },
+        "gmean": {
+          "mean": 0.951143454718952,
+          "std": 0.02007217389497604,
+          "ci_low": 0.9012814105902495,
+          "ci_high": 1.0010054988476547,
+          "runs": [
+            0.966536624676001,
+            0.9584528653380282,
+            0.9284408741428268
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.9565454864194166,
+          "std": 0.018592415738801143,
+          "ci_low": 0.9103593653306927,
+          "ci_high": 1.0027316075081405,
+          "runs": [
+            0.9702890859618847,
+            0.9639569995242849,
+            0.9353903737720806
+          ]
+        }
+      },
+      "archive_sha256": "69064c50f5fca673be802e130d4404ec336739f8c611d6c4d9288bec67e48cfd"
+    },
+    "A3": {
+      "dataset": "NKSID",
+      "source_result": "results/htpl20/representation/sym4_only",
+      "recorded_runs": [
+        {
+          "seed": 0,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "sym4_only",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 0,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "sym4",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "_parsed_groups": [
+              "sym4"
+            ],
+            "_rgb_cnn_in_ch": 0,
+            "_wavelet_cnn_in_chs": [
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.9789674952198852,
+            "gmean": 0.9577974897093466,
+            "macro_f1": 0.9512104915065442
+          },
+          "recall": [
+            0.85,
+            1.0,
+            1.0,
+            0.9894736842105263,
+            1.0,
+            0.8421052631578947,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "seed": 1,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "sym4_only",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 1,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "sym4",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "_parsed_groups": [
+              "sym4"
+            ],
+            "_rgb_cnn_in_ch": 0,
+            "_wavelet_cnn_in_chs": [
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.9694072657743786,
+            "gmean": 0.940881316067876,
+            "macro_f1": 0.9349687604454553
+          },
+          "recall": [
+            0.75,
+            0.9827586206896551,
+            1.0,
+            0.9894736842105263,
+            1.0,
+            0.8421052631578947,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "seed": 2,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "sym4_only",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 2,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "sym4",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "_parsed_groups": [
+              "sym4"
+            ],
+            "_rgb_cnn_in_ch": 0,
+            "_wavelet_cnn_in_chs": [
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.9923518164435946,
+            "gmean": 0.9766223423241729,
+            "macro_f1": 0.9805060823002154
+          },
+          "recall": [
+            1.0,
+            0.9827586206896551,
+            1.0,
+            1.0,
+            1.0,
+            0.8421052631578947,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "recorded_summary": {
+        "accuracy": {
+          "mean": 0.9802421924792862,
+          "std": 0.011525265340997487,
+          "ci_low": 0.9516118462081401,
+          "ci_high": 1.0088725387504323,
+          "runs": [
+            0.9789674952198852,
+            0.9694072657743786,
+            0.9923518164435946
+          ]
+        },
+        "gmean": {
+          "mean": 0.9584337160337985,
+          "std": 0.017879005213245813,
+          "ci_low": 0.9140198049355441,
+          "ci_high": 1.0028476271320528,
+          "runs": [
+            0.9577974897093466,
+            0.940881316067876,
+            0.9766223423241729
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.9555617780840716,
+          "std": 0.02307839230938392,
+          "ci_low": 0.8982318734224727,
+          "ci_high": 1.0128916827456707,
+          "runs": [
+            0.9512104915065442,
+            0.9349687604454553,
+            0.9805060823002154
+          ]
+        }
+      },
+      "ensemble": {
+        "source_result": "results/htpl20/representation/a3_ensemble_3seed",
+        "metrics": {
+          "accuracy": 0.9847036328871893,
+          "gmean": 0.9665134398148797,
+          "macro_f1": 0.9630276050005369
+        }
+      },
+      "archive_sha256": "27dd1112a4ff8c5be798487acac487e60f6289a06d71b33896cbcedadb6ea247"
+    },
+    "A4": {
+      "dataset": "NKSID",
+      "source_result": "results/htpl20/representation/three_wavelets",
+      "recorded_runs": [
+        {
+          "seed": 0,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "three_wavelets",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 0,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "bior,rbio,sym4",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "_parsed_groups": [
+              "bior",
+              "rbio",
+              "sym4"
+            ],
+            "_rgb_cnn_in_ch": 0,
+            "_wavelet_cnn_in_chs": [
+              4,
+              4,
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.9808795411089866,
+            "gmean": 0.938530554123766,
+            "macro_f1": 0.9504969878647533
+          },
+          "recall": [
+            0.975,
+            0.9827586206896551,
+            1.0,
+            0.9947368421052631,
+            1.0,
+            0.631578947368421,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "seed": 1,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "three_wavelets",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 1,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "bior,rbio,sym4",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "_parsed_groups": [
+              "bior",
+              "rbio",
+              "sym4"
+            ],
+            "_rgb_cnn_in_ch": 0,
+            "_wavelet_cnn_in_chs": [
+              4,
+              4,
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.9694072657743786,
+            "gmean": 0.9377382946250731,
+            "macro_f1": 0.9343234440738794
+          },
+          "recall": [
+            0.9,
+            0.9655172413793104,
+            1.0,
+            0.9842105263157894,
+            0.9545454545454546,
+            0.7368421052631579,
+            1.0,
+            0.9940119760479041
+          ]
+        },
+        {
+          "seed": 2,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "three_wavelets",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 2,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "bior,rbio,sym4",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "_parsed_groups": [
+              "bior",
+              "rbio",
+              "sym4"
+            ],
+            "_rgb_cnn_in_ch": 0,
+            "_wavelet_cnn_in_chs": [
+              4,
+              4,
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.9808795411089866,
+            "gmean": 0.956100133219633,
+            "macro_f1": 0.9563473211434885
+          },
+          "recall": [
+            0.95,
+            0.9310344827586207,
+            1.0,
+            1.0,
+            1.0,
+            0.7894736842105263,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "recorded_summary": {
+        "accuracy": {
+          "mean": 0.9770554493307838,
+          "std": 0.0066235212526533915,
+          "ci_low": 0.9606017104026916,
+          "ci_high": 0.993509188258876,
+          "runs": [
+            0.9808795411089866,
+            0.9694072657743786,
+            0.9808795411089866
+          ]
+        },
+        "gmean": {
+          "mean": 0.9441229939894907,
+          "std": 0.010380068250352623,
+          "ci_low": 0.9183374749985671,
+          "ci_high": 0.9699085129804144,
+          "runs": [
+            0.938530554123766,
+            0.9377382946250731,
+            0.956100133219633
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.9470559176940405,
+          "std": 0.011408045986677209,
+          "ci_low": 0.9187167604415049,
+          "ci_high": 0.9753950749465762,
+          "runs": [
+            0.9504969878647533,
+            0.9343234440738794,
+            0.9563473211434885
+          ]
+        }
+      },
+      "archive_sha256": "fd8f750ce1ad74949c8d4e65c8fe81f9209deb7a8bc4753c3923ce7311dc9385"
+    },
+    "A5": {
+      "dataset": "NKSID",
+      "source_result": "results/htpl20/representation/full_mwsfnet",
+      "recorded_runs": [
+        {
+          "seed": 0,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "full_mwsfnet",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 0,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "rgb,bior,rbio,sym4",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "_parsed_groups": [
+              "rgb",
+              "bior",
+              "rbio",
+              "sym4"
+            ],
+            "_rgb_cnn_in_ch": 3,
+            "_wavelet_cnn_in_chs": [
+              4,
+              4,
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.9254302103250478,
+            "gmean": 0.908838454088303,
+            "macro_f1": 0.8882392968881073
+          },
+          "recall": [
+            0.925,
+            0.9137931034482759,
+            1.0,
+            0.9157894736842105,
+            1.0,
+            0.631578947368421,
+            1.0,
+            0.9520958083832335
+          ]
+        },
+        {
+          "seed": 1,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "full_mwsfnet",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 1,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "rgb,bior,rbio,sym4",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "_parsed_groups": [
+              "rgb",
+              "bior",
+              "rbio",
+              "sym4"
+            ],
+            "_rgb_cnn_in_ch": 3,
+            "_wavelet_cnn_in_chs": [
+              4,
+              4,
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.9541108986615678,
+            "gmean": 0.9247873133371264,
+            "macro_f1": 0.9140487733933989
+          },
+          "recall": [
+            0.925,
+            1.0,
+            1.0,
+            0.9526315789473684,
+            0.9090909090909091,
+            0.6842105263157895,
+            1.0,
+            0.9760479041916168
+          ]
+        },
+        {
+          "seed": 2,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "full_mwsfnet",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 2,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "rgb,bior,rbio,sym4",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "_parsed_groups": [
+              "rgb",
+              "bior",
+              "rbio",
+              "sym4"
+            ],
+            "_rgb_cnn_in_ch": 3,
+            "_wavelet_cnn_in_chs": [
+              4,
+              4,
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.9789674952198852,
+            "gmean": 0.9641529968087132,
+            "macro_f1": 0.9599021070573717
+          },
+          "recall": [
+            1.0,
+            0.9482758620689655,
+            1.0,
+            0.9894736842105263,
+            1.0,
+            0.8421052631578947,
+            0.9565217391304348,
+            0.9880239520958084
+          ]
+        }
+      ],
+      "recorded_summary": {
+        "accuracy": {
+          "mean": 0.952836201402167,
+          "std": 0.026791395228787367,
+          "ci_low": 0.8862826861647531,
+          "ci_high": 1.0193897166395807,
+          "runs": [
+            0.9254302103250478,
+            0.9541108986615678,
+            0.9789674952198852
+          ]
+        },
+        "gmean": {
+          "mean": 0.932592921411381,
+          "std": 0.028471394366076857,
+          "ci_low": 0.86186605696137,
+          "ci_high": 1.0033197858613918,
+          "runs": [
+            0.908838454088303,
+            0.9247873133371264,
+            0.9641529968087132
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.9207300591129594,
+          "std": 0.03629558202438426,
+          "ci_low": 0.8305668350373764,
+          "ci_high": 1.0108932831885424,
+          "runs": [
+            0.8882392968881073,
+            0.9140487733933989,
+            0.9599021070573717
+          ]
+        }
+      },
+      "archive_sha256": "230e0572c00be5fdad32c35c8a046bfe7507aa7bef822ac651a004c175dbd1f9"
+    },
+    "A6": {
+      "dataset": "NKSID",
+      "source_result": "results/htpl20/representation/rgb_sym4",
+      "recorded_runs": [
+        {
+          "seed": 0,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "rgb_sym4",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 0,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "rgb,sym4",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "_parsed_groups": [
+              "rgb",
+              "sym4"
+            ],
+            "_rgb_cnn_in_ch": 3,
+            "_wavelet_cnn_in_chs": [
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.9789674952198852,
+            "gmean": 0.962500376183457,
+            "macro_f1": 0.9587631949331457
+          },
+          "recall": [
+            0.975,
+            0.9827586206896551,
+            1.0,
+            0.9736842105263158,
+            1.0,
+            0.7894736842105263,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "seed": 1,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "rgb_sym4",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 1,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "rgb,sym4",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "_parsed_groups": [
+              "rgb",
+              "sym4"
+            ],
+            "_rgb_cnn_in_ch": 3,
+            "_wavelet_cnn_in_chs": [
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.9311663479923518,
+            "gmean": 0.9189264167221789,
+            "macro_f1": 0.892325089719054
+          },
+          "recall": [
+            0.75,
+            0.8793103448275862,
+            1.0,
+            0.9210526315789473,
+            1.0,
+            0.8421052631578947,
+            1.0,
+            0.9940119760479041
+          ]
+        },
+        {
+          "seed": 2,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "rgb_sym4",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 2,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "rgb,sym4",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "_parsed_groups": [
+              "rgb",
+              "sym4"
+            ],
+            "_rgb_cnn_in_ch": 3,
+            "_wavelet_cnn_in_chs": [
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.8986615678776291,
+            "gmean": 0.8876552612337327,
+            "macro_f1": 0.8491254600204087
+          },
+          "recall": [
+            0.95,
+            0.9655172413793104,
+            1.0,
+            0.8263157894736842,
+            0.9090909090909091,
+            0.631578947368421,
+            0.9130434782608695,
+            0.9700598802395209
+          ]
+        }
+      ],
+      "recorded_summary": {
+        "accuracy": {
+          "mean": 0.9362651370299554,
+          "std": 0.04039503346715313,
+          "ci_low": 0.8359183110280272,
+          "ci_high": 1.0366119630318837,
+          "runs": [
+            0.9789674952198852,
+            0.9311663479923518,
+            0.8986615678776291
+          ]
+        },
+        "gmean": {
+          "mean": 0.9230273513797895,
+          "std": 0.03759070439295934,
+          "ci_low": 0.8296468649871376,
+          "ci_high": 1.0164078377724415,
+          "runs": [
+            0.962500376183457,
+            0.9189264167221789,
+            0.8876552612337327
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.9000712482242027,
+          "std": 0.055227805115621455,
+          "ci_low": 0.7628777748009898,
+          "ci_high": 1.0372647216474156,
+          "runs": [
+            0.9587631949331457,
+            0.892325089719054,
+            0.8491254600204087
+          ]
+        }
+      },
+      "archive_sha256": "6381fa2fb8b2095c1b2dde189068b43be1f6a817c1b8f08800fb89695340b023"
+    },
+    "A7": {
+      "dataset": "NKSID",
+      "source_result": "results/htpl20/representation/bior_sym4",
+      "recorded_runs": [
+        {
+          "seed": 0,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "bior_sym4",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 0,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "bior,sym4",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "_parsed_groups": [
+              "bior",
+              "sym4"
+            ],
+            "_rgb_cnn_in_ch": 0,
+            "_wavelet_cnn_in_chs": [
+              4,
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.9655831739961759,
+            "gmean": 0.9438980360284911,
+            "macro_f1": 0.9483852929741518
+          },
+          "recall": [
+            0.975,
+            0.9655172413793104,
+            1.0,
+            0.9631578947368421,
+            0.9545454545454546,
+            0.7368421052631579,
+            1.0,
+            0.9880239520958084
+          ]
+        },
+        {
+          "seed": 1,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "bior_sym4",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 1,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "bior,sym4",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "_parsed_groups": [
+              "bior",
+              "sym4"
+            ],
+            "_rgb_cnn_in_ch": 0,
+            "_wavelet_cnn_in_chs": [
+              4,
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.9770554493307839,
+            "gmean": 0.949660209847318,
+            "macro_f1": 0.9475923382173382
+          },
+          "recall": [
+            0.9,
+            0.9310344827586207,
+            1.0,
+            1.0,
+            1.0,
+            0.7894736842105263,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "seed": 2,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "bior_sym4",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 2,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "bior,sym4",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "_parsed_groups": [
+              "bior",
+              "sym4"
+            ],
+            "_rgb_cnn_in_ch": 0,
+            "_wavelet_cnn_in_chs": [
+              4,
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.9694072657743786,
+            "gmean": 0.9341613743892307,
+            "macro_f1": 0.936698178639378
+          },
+          "recall": [
+            0.975,
+            0.9482758620689655,
+            1.0,
+            0.9789473684210527,
+            0.9090909090909091,
+            0.7368421052631579,
+            0.9565217391304348,
+            1.0
+          ]
+        }
+      ],
+      "recorded_summary": {
+        "accuracy": {
+          "mean": 0.9706819630337794,
+          "std": 0.005841396679357345,
+          "ci_low": 0.9561711292534745,
+          "ci_high": 0.9851927968140843,
+          "runs": [
+            0.9655831739961759,
+            0.9770554493307839,
+            0.9694072657743786
+          ]
+        },
+        "gmean": {
+          "mean": 0.9425732067550133,
+          "std": 0.007833891407985795,
+          "ci_low": 0.9231127416789201,
+          "ci_high": 0.9620336718311066,
+          "runs": [
+            0.9438980360284911,
+            0.949660209847318,
+            0.9341613743892307
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.9442252699436228,
+          "std": 0.006530698426540235,
+          "ci_low": 0.9280021156983866,
+          "ci_high": 0.9604484241888589,
+          "runs": [
+            0.9483852929741518,
+            0.9475923382173382,
+            0.936698178639378
+          ]
+        }
+      },
+      "archive_sha256": "1965cf6cf7c3e78c41431a0c12879c0e089fe04f5aab9295e95a1503b9e4944b"
+    },
+    "A8": {
+      "dataset": "NKSID",
+      "source_result": "results/htpl20/representation/rbio_sym4",
+      "recorded_runs": [
+        {
+          "seed": 0,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "rbio_sym4",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 0,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "rbio,sym4",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "_parsed_groups": [
+              "rbio",
+              "sym4"
+            ],
+            "_rgb_cnn_in_ch": 0,
+            "_wavelet_cnn_in_chs": [
+              4,
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.9770554493307839,
+            "gmean": 0.9467650707493137,
+            "macro_f1": 0.9519593557113201
+          },
+          "recall": [
+            0.925,
+            0.9827586206896551,
+            1.0,
+            0.9894736842105263,
+            0.9090909090909091,
+            0.7894736842105263,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "seed": 1,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "rbio_sym4",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 1,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "rbio,sym4",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "_parsed_groups": [
+              "rbio",
+              "sym4"
+            ],
+            "_rgb_cnn_in_ch": 0,
+            "_wavelet_cnn_in_chs": [
+              4,
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.9866156787762906,
+            "gmean": 0.963580024787665,
+            "macro_f1": 0.9667839892605135
+          },
+          "recall": [
+            0.975,
+            0.9655172413793104,
+            1.0,
+            1.0,
+            1.0,
+            0.7894736842105263,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "seed": 2,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "rbio_sym4",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 2,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "rbio,sym4",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "_parsed_groups": [
+              "rbio",
+              "sym4"
+            ],
+            "_rgb_cnn_in_ch": 0,
+            "_wavelet_cnn_in_chs": [
+              4,
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.9770554493307839,
+            "gmean": 0.9541999278936395,
+            "macro_f1": 0.9546084424361094
+          },
+          "recall": [
+            0.9,
+            0.9827586206896551,
+            1.0,
+            0.9842105263157894,
+            1.0,
+            0.7894736842105263,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "recorded_summary": {
+        "accuracy": {
+          "mean": 0.980242192479286,
+          "std": 0.005519601043877891,
+          "ci_low": 0.9665307433725424,
+          "ci_high": 0.9939536415860296,
+          "runs": [
+            0.9770554493307839,
+            0.9866156787762906,
+            0.9770554493307839
+          ]
+        },
+        "gmean": {
+          "mean": 0.9548483411435393,
+          "std": 0.008426209090388817,
+          "ci_low": 0.9339164773752704,
+          "ci_high": 0.9757802049118083,
+          "runs": [
+            0.9467650707493137,
+            0.963580024787665,
+            0.9541999278936395
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.957783929135981,
+          "std": 0.007906024715542154,
+          "ci_low": 0.9381442749903159,
+          "ci_high": 0.977423583281646,
+          "runs": [
+            0.9519593557113201,
+            0.9667839892605135,
+            0.9546084424361094
+          ]
+        }
+      },
+      "archive_sha256": "065f1dbbf127cc50709916a2497aa2d3bcaaa60a46eba09cfe2ac3cc0a70c12f"
+    },
+    "SBW": {
+      "dataset": "NKSID",
+      "source_result": "results/htpl20/sbw/sbw_mwsfnet",
+      "recorded_runs": [
+        {
+          "seed": 0,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "sbw_mwsfnet",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 0,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "rgb,bior,rbio,sym4",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "branch_gate": false,
+            "static_branch_gate": true,
+            "_parsed_groups": [
+              "rgb",
+              "bior",
+              "rbio",
+              "sym4"
+            ],
+            "_rgb_cnn_in_ch": 3,
+            "_wavelet_cnn_in_chs": [
+              4,
+              4,
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.9502868068833652,
+            "gmean": 0.9359790880033414,
+            "macro_f1": 0.9114256603207103
+          },
+          "recall": [
+            0.875,
+            0.9655172413793104,
+            1.0,
+            0.9421052631578948,
+            0.9545454545454546,
+            0.7894736842105263,
+            1.0,
+            0.9820359281437125
+          ]
+        },
+        {
+          "seed": 1,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "sbw_mwsfnet",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 1,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "rgb,bior,rbio,sym4",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "branch_gate": false,
+            "static_branch_gate": true,
+            "_parsed_groups": [
+              "rgb",
+              "bior",
+              "rbio",
+              "sym4"
+            ],
+            "_rgb_cnn_in_ch": 3,
+            "_wavelet_cnn_in_chs": [
+              4,
+              4,
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.9655831739961759,
+            "gmean": 0.9396020966763596,
+            "macro_f1": 0.9320256362921879
+          },
+          "recall": [
+            0.95,
+            0.9827586206896551,
+            1.0,
+            0.968421052631579,
+            1.0,
+            0.6842105263157895,
+            1.0,
+            0.9820359281437125
+          ]
+        },
+        {
+          "seed": 2,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "sbw_mwsfnet",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 2,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "rgb,bior,rbio,sym4",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "branch_gate": false,
+            "static_branch_gate": true,
+            "_parsed_groups": [
+              "rgb",
+              "bior",
+              "rbio",
+              "sym4"
+            ],
+            "_rgb_cnn_in_ch": 3,
+            "_wavelet_cnn_in_chs": [
+              4,
+              4,
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.8948374760994264,
+            "gmean": 0.8447522059308161,
+            "macro_f1": 0.835702825395395
+          },
+          "recall": [
+            1.0,
+            0.8448275862068966,
+            0.75,
+            0.9052631578947369,
+            0.8636363636363636,
+            0.5789473684210527,
+            1.0,
+            0.9041916167664671
+          ]
+        }
+      ],
+      "recorded_summary": {
+        "accuracy": {
+          "mean": 0.9369024856596558,
+          "std": 0.03722356086793837,
+          "ci_low": 0.8444340343431221,
+          "ci_high": 1.0293709369761894,
+          "runs": [
+            0.9502868068833652,
+            0.9655831739961759,
+            0.8948374760994264
+          ]
+        },
+        "gmean": {
+          "mean": 0.9067777968701725,
+          "std": 0.05374627425685855,
+          "ci_low": 0.7732646501242887,
+          "ci_high": 1.0402909436160561,
+          "runs": [
+            0.9359790880033414,
+            0.9396020966763596,
+            0.8447522059308161
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.8930513740027645,
+          "std": 0.050722103397189904,
+          "ci_low": 0.7670506841360669,
+          "ci_high": 1.019052063869462,
+          "runs": [
+            0.9114256603207103,
+            0.9320256362921879,
+            0.835702825395395
+          ]
+        }
+      },
+      "archive_sha256": "fa70cf0760d96014a19573c736a52d754b2242640d05641f46778160b9f9db12"
+    },
+    "BAF": {
+      "dataset": "NKSID",
+      "source_result": "results/htpl20/baf/baf_mwsfnet",
+      "recorded_runs": [
+        {
+          "seed": 0,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "baf_mwsfnet",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 0,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "rgb,bior,rbio,sym4",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "branch_gate": true,
+            "_parsed_groups": [
+              "rgb",
+              "bior",
+              "rbio",
+              "sym4"
+            ],
+            "_rgb_cnn_in_ch": 3,
+            "_wavelet_cnn_in_chs": [
+              4,
+              4,
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.9847036328871893,
+            "gmean": 0.9767467601352838,
+            "macro_f1": 0.9702617938070701
+          },
+          "recall": [
+            0.975,
+            0.9655172413793104,
+            1.0,
+            0.9894736842105263,
+            1.0,
+            0.8947368421052632,
+            1.0,
+            0.9940119760479041
+          ]
+        },
+        {
+          "seed": 1,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "baf_mwsfnet",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 1,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "rgb,bior,rbio,sym4",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "branch_gate": true,
+            "_parsed_groups": [
+              "rgb",
+              "bior",
+              "rbio",
+              "sym4"
+            ],
+            "_rgb_cnn_in_ch": 3,
+            "_wavelet_cnn_in_chs": [
+              4,
+              4,
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.9579349904397706,
+            "gmean": 0.9525022759133678,
+            "macro_f1": 0.9334021290821002
+          },
+          "recall": [
+            1.0,
+            0.9827586206896551,
+            1.0,
+            0.9315789473684211,
+            0.9545454545454546,
+            0.7894736842105263,
+            1.0,
+            0.9820359281437125
+          ]
+        },
+        {
+          "seed": 2,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "baf_mwsfnet",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 2,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "rgb,bior,rbio,sym4",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "branch_gate": true,
+            "_parsed_groups": [
+              "rgb",
+              "bior",
+              "rbio",
+              "sym4"
+            ],
+            "_rgb_cnn_in_ch": 3,
+            "_wavelet_cnn_in_chs": [
+              4,
+              4,
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.9617590822179732,
+            "gmean": 0.9387933698773309,
+            "macro_f1": 0.9286967404438402
+          },
+          "recall": [
+            0.95,
+            0.896551724137931,
+            1.0,
+            0.9789473684210527,
+            1.0,
+            0.7368421052631579,
+            1.0,
+            0.9820359281437125
+          ]
+        }
+      ],
+      "recorded_summary": {
+        "accuracy": {
+          "mean": 0.9681325685149776,
+          "std": 0.014477777809560924,
+          "ci_low": 0.9321677746763509,
+          "ci_high": 1.0040973623536043,
+          "runs": [
+            0.9847036328871893,
+            0.9579349904397706,
+            0.9617590822179732
+          ]
+        },
+        "gmean": {
+          "mean": 0.9560141353086609,
+          "std": 0.019218866390277832,
+          "ci_low": 0.9082718245320724,
+          "ci_high": 1.0037564460852493,
+          "runs": [
+            0.9767467601352838,
+            0.9525022759133678,
+            0.9387933698773309
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.9441202211110035,
+          "std": 0.022761184895059135,
+          "ci_low": 0.8875783033497657,
+          "ci_high": 1.0006621388722412,
+          "runs": [
+            0.9702617938070701,
+            0.9334021290821002,
+            0.9286967404438402
+          ]
+        }
+      },
+      "ensemble": {
+        "source_result": "results/htpl20/baf/baf_ensemble_3seed",
+        "metrics": {
+          "accuracy": 0.9808795411089866,
+          "gmean": 0.9702219649991068,
+          "macro_f1": 0.9613017020138259
+        }
+      },
+      "archive_sha256": "401b5973f1fcdf792f1d77a2d3a8c02616091dd4ca72ff8efcf98693288a7156"
+    },
+    "WC": {
+      "dataset": "NKSID",
+      "source_result": "results/htpl20/wavelet_cnn_baseline/sym4_dwt_resnet18",
+      "recorded_runs": [
+        {
+          "seed": 0,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "sym4_dwt_resnet18",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 0,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "sym4",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "branch_gate": false,
+            "static_branch_gate": false,
+            "dwt_cnn": true,
+            "_parsed_groups": [
+              "sym4"
+            ],
+            "_rgb_cnn_in_ch": 0,
+            "_wavelet_cnn_in_chs": [
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.982791586998088,
+            "gmean": 0.9576088904446195,
+            "macro_f1": 0.9580858727233799
+          },
+          "recall": [
+            0.975,
+            0.9655172413793104,
+            1.0,
+            0.9947368421052631,
+            1.0,
+            0.7894736842105263,
+            0.9565217391304348,
+            1.0
+          ]
+        },
+        {
+          "seed": 1,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "sym4_dwt_resnet18",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 1,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "sym4",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "branch_gate": false,
+            "static_branch_gate": false,
+            "dwt_cnn": true,
+            "_parsed_groups": [
+              "sym4"
+            ],
+            "_rgb_cnn_in_ch": 0,
+            "_wavelet_cnn_in_chs": [
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.9751434034416826,
+            "gmean": 0.9338871451812208,
+            "macro_f1": 0.9468024273302407
+          },
+          "recall": [
+            1.0,
+            0.9310344827586207,
+            1.0,
+            0.9947368421052631,
+            0.9545454545454546,
+            0.6842105263157895,
+            0.9565217391304348,
+            1.0
+          ]
+        },
+        {
+          "seed": 2,
+          "config": {
+            "dataset": "NKSID",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "sym4_dwt_resnet18",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 2,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "_htpl",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "sym4",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "branch_gate": false,
+            "static_branch_gate": false,
+            "dwt_cnn": true,
+            "_parsed_groups": [
+              "sym4"
+            ],
+            "_rgb_cnn_in_ch": 0,
+            "_wavelet_cnn_in_chs": [
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.988527724665392,
+            "gmean": 0.9595053073377576,
+            "macro_f1": 0.9681156649585173
+          },
+          "recall": [
+            0.975,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.7368421052631579,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "recorded_summary": {
+        "accuracy": {
+          "mean": 0.9821542383683876,
+          "std": 0.006714884482379054,
+          "ci_low": 0.9654735405958693,
+          "ci_high": 0.9988349361409058,
+          "runs": [
+            0.982791586998088,
+            0.9751434034416826,
+            0.988527724665392
+          ]
+        },
+        "gmean": {
+          "mean": 0.950333780987866,
+          "std": 0.014274731916062787,
+          "ci_low": 0.9148733811104879,
+          "ci_high": 0.9857941808652442,
+          "runs": [
+            0.9576088904446195,
+            0.9338871451812208,
+            0.9595053073377576
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.9576679883373793,
+          "std": 0.010662762075086084,
+          "ci_low": 0.931180218955565,
+          "ci_high": 0.9841557577191936,
+          "runs": [
+            0.9580858727233799,
+            0.9468024273302407,
+            0.9681156649585173
+          ]
+        }
+      },
+      "archive_sha256": "67137f16137a7427ac2cc2979dc70444fb8c6b4effe90bbcc296213aff1165e8"
+    },
+    "FLS": {
+      "dataset": "FLSMDD",
+      "source_result": "results/flsmdd/cross_dataset/mwsfnet_flsmdd",
+      "recorded_runs": [
+        {
+          "seed": 0,
+          "config": {
+            "dataset": "FLSMDD",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "baf_mwsfnet",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 0,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "rgb,bior,rbio,sym4",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "branch_gate": true,
+            "static_branch_gate": false,
+            "dwt_cnn": false,
+            "_parsed_groups": [
+              "rgb",
+              "bior",
+              "rbio",
+              "sym4"
+            ],
+            "_rgb_cnn_in_ch": 3,
+            "_wavelet_cnn_in_chs": [
+              4,
+              4,
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.9985994397759104,
+            "gmean": 0.9990435126243309,
+            "macro_f1": 0.9987916040931791
+          },
+          "recall": [
+            1.0,
+            1.0,
+            1.0,
+            0.9904761904761905,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "seed": 1,
+          "config": {
+            "dataset": "FLSMDD",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "baf_mwsfnet",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 1,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "rgb,bior,rbio,sym4",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "branch_gate": true,
+            "static_branch_gate": false,
+            "dwt_cnn": false,
+            "_parsed_groups": [
+              "rgb",
+              "bior",
+              "rbio",
+              "sym4"
+            ],
+            "_rgb_cnn_in_ch": 3,
+            "_wavelet_cnn_in_chs": [
+              4,
+              4,
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.9901960784313726,
+            "gmean": 0.984801562054045,
+            "macro_f1": 0.9876530877054623
+          },
+          "recall": [
+            1.0,
+            1.0,
+            1.0,
+            0.9904761904761905,
+            0.875,
+            1.0,
+            1.0,
+            1.0,
+            0.99,
+            1.0
+          ]
+        },
+        {
+          "seed": 2,
+          "config": {
+            "dataset": "FLSMDD",
+            "lr": 0.01,
+            "backbone": "resnet18",
+            "bs": 32,
+            "es": 80,
+            "p_value": 0,
+            "k_value": 0,
+            "method_name": "baf_mwsfnet",
+            "loss": "focal",
+            "no_plud": false,
+            "save_results": "True",
+            "save_models": false,
+            "sampler": null,
+            "seed": 2,
+            "unfreeze_epoch": 10,
+            "group_att": false,
+            "rgb_only": false,
+            "no_phys_init": false,
+            "base_fusion": false,
+            "split_prefix": "",
+            "aug": "none",
+            "boost_classes": "",
+            "boost_factor": 3,
+            "groups": "rgb,bior,rbio,sym4",
+            "plain_resnet": false,
+            "no_branch_refine": false,
+            "no_att_fusion": false,
+            "branch_gate": true,
+            "static_branch_gate": false,
+            "dwt_cnn": false,
+            "_parsed_groups": [
+              "rgb",
+              "bior",
+              "rbio",
+              "sym4"
+            ],
+            "_rgb_cnn_in_ch": 3,
+            "_wavelet_cnn_in_chs": [
+              4,
+              4,
+              4
+            ]
+          },
+          "metrics": {
+            "accuracy": 0.9985994397759104,
+            "gmean": 0.9990435126243309,
+            "macro_f1": 0.9987916040931791
+          },
+          "recall": [
+            1.0,
+            1.0,
+            1.0,
+            0.9904761904761905,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "recorded_summary": {
+        "accuracy": {
+          "mean": 0.9957983193277311,
+          "std": 0.004851682934366586,
+          "ci_low": 0.983746070785165,
+          "ci_high": 1.0078505678702974,
+          "runs": [
+            0.9985994397759104,
+            0.9901960784313726,
+            0.9985994397759104
+          ]
+        },
+        "gmean": {
+          "mean": 0.994296195767569,
+          "std": 0.008222593995539896,
+          "ci_low": 0.9738701399350896,
+          "ci_high": 1.0147222516000483,
+          "runs": [
+            0.9990435126243309,
+            0.984801562054045,
+            0.9990435126243309
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.9950787652972736,
+          "std": 0.006430825434821347,
+          "ci_low": 0.9791037093171486,
+          "ci_high": 1.0110538212773985,
+          "runs": [
+            0.9987916040931791,
+            0.9876530877054623,
+            0.9987916040931791
+          ]
+        }
+      },
+      "archive_sha256": "4340ba52392096007c0283e813d371a137632fb58d8fb61a98b33828d4b37a2c"
+    }
+  }
+}
